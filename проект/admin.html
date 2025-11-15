@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель - Футбольная лига Оренбурга</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-content">
+                <div class="logo">Админ-панель Футбольной лиги</div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link">← На сайт</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-section="matches">Матчи</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-section="teams">Команды</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-section="news">Новости</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <section id="matches-section" class="section">
+                <h1>Управление матчами</h1>
+                
+                <div class="admin-form">
+                    <h3>Добавить результат матча</h3>
+                    <form class="match-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="homeTeam">Хозяева:</label>
+                                <select id="homeTeam" required>
+                                    <option value="">Выберите команду</option>
+                                    <option value="1">ЦСК Оренбург</option>
+                                    <option value="2">Лист</option>
+                                    <option value="3">Газовик</option>
+                                    <option value="4">Факел</option>
+                                    <option value="5">Маяк</option>
+                                    <option value="6">Урал</option>
+                                    <option value="7">Барса</option>
+                                    <option value="8">Легион</option>
+                                    <option value="9">Спартак</option>
+                                    <option value="10">Форвард</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="awayTeam">Гости:</label>
+                                <select id="awayTeam" required>
+                                    <option value="">Выберите команду</option>
+                                    <option value="1">ЦСК Оренбург</option>
+                                    <option value="2">Лист</option>
+                                    <option value="3">Газовик</option>
+                                    <option value="4">Факел</option>
+                                    <option value="5">Маяк</option>
+                                    <option value="6">Урал</option>
+                                    <option value="7">Барса</option>
+                                    <option value="8">Легион</option>
+                                    <option value="9">Спартак</option>
+                                    <option value="10">Форвард</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="homeScore">Голы хозяев:</label>
+                                <input type="number" id="homeScore" min="0" value="0" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="awayScore">Голы гостей:</label>
+                                <input type="number" id="awayScore" min="0" value="0" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="matchDate">Дата матча:</label>
+                            <input type="date" id="matchDate" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-success">Сохранить результат!</button>
+                    </form>
+                </div>
+
+                <div class="recent-matches">
+                    <h3>Последние добавленные матчи</h3>
+                    <div class="matches-list">
+                        <div class="empty-state">
+                            <p>Матчи еще не добавлены</p>
+                            <small>Здесь будут отображаться последние 10 матчей</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="teams-section" class="section hidden">
+                <h1>Управление командами</h1>
+                
+                <div class="admin-form">
+                    <h3>Добавить новую команду</h3>
+                    <form class="team-form">
+                        <div class="form-group">
+                            <label for="teamName">Название команды:</label>
+                            <input type="text" id="teamName" required placeholder="Введите название команды">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="teamCoach">Тренер:</label>
+                            <input type="text" id="teamCoach" placeholder="ФИО тренера">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="teamCity">Город:</label>
+                            <input type="text" id="teamCity" placeholder="Город команды">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Добавить команду</button>
+                    </form>
+                </div>
+
+                <div class="teams-list">
+                    <h3>Список команд</h3>
+                    <div class="teams-grid">
+                        <div class="team-card">
+                            <h4>ЦСК Оренбург</h4>
+                            <p>Тренер: Иван Петров</p>
+                            <p>Город: Оренбург</p>
+                            <div class="team-actions">
+                                <button class="btn btn-small">Редактировать</button>
+                                <button class="btn btn-small btn-danger">Удалить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="news-section" class="section hidden">
+                <h1>Управление новостями</h1>
+                
+                <div class="admin-form">
+                    <h3>Создать новую новость</h3>
+                    <form class="news-form">
+                        <div class="form-group">
+                            <label for="newsTitle">Заголовок новости:</label>
+                            <input type="text" id="newsTitle" required placeholder="Введите заголовок">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="newsContent">Текст новости:</label>
+                            <textarea id="newsContent" rows="6" required placeholder="Введите текст новости"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="newsImage">Изображение (URL):</label>
+                            <input type="url" id="newsImage" placeholder="">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-success">Опубликовать новость</button>
+                    </form>
+                </div>
+
+                <div class="news-list">
+                    <h3>Опубликованные новости</h3>
+                    <div class="empty-state">
+                        <p>Новости еще не добавлены</p>
+                        <small>Здесь будут отображаться все опубликованные новости</small>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Футбольная лига Оренбурга - Админ-панель</p>
+            <p>Макаров Максим Вячеславович</p>
+        </div>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>

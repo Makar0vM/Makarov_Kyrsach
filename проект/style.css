@@ -370,3 +370,128 @@ table td {
 .btn-primary:hover {
     background-color: #2980b9;
 }
+
+/* Стили для админ-панели */
+.admin-form {
+    background: #333;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid #444;
+}
+
+.admin-form h3 {
+    color: #3498db;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    width: auto;
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.team-card {
+    background: #333;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    border-color: #3498db;
+    transform: translateY(-2px);
+}
+
+.team-card h4 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.team-card p {
+    color: #ccc;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.team-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #888;
+    background: #333;
+    border-radius: 8px;
+    border: 2px dashed #444;
+}
+
+.empty-state p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.empty-state small {
+    font-size: 0.9rem;
+}
+
+.matches-list, .news-list {
+    margin-top: 1rem;
+}
+
+.recent-matches, .teams-list, .news-list {
+    background: #2d2d2d;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
